@@ -1,73 +1,119 @@
-# React + TypeScript + Vite
+# 🚀 Phani Vardhan Vadla — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic 3D portfolio built with **React**, **Three.js**, **GSAP**, and **TypeScript**. Features a floating avatar, animated particle background, scroll-triggered animations, and a custom cursor.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+> Deploy via Vercel or Netlify for best performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+portfolio-react/
+├── public/
+│   └── Avatar.png          # 3D avatar image
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx       # Fixed navigation with mobile menu
+│   │   ├── Hero.tsx         # Hero section with 3D scene + avatar
+│   │   ├── About.tsx        # About section with animated stats
+│   │   ├── Experience.tsx   # Work experience timeline
+│   │   ├── Skills.tsx       # Technical skills grid
+│   │   ├── Projects.tsx     # Featured projects
+│   │   ├── Education.tsx    # Education & certifications
+│   │   ├── Contact.tsx      # Contact form
+│   │   ├── Footer.tsx       # Footer
+│   │   └── Cursor.tsx       # Custom cursor
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **3D Particle Background** — Two thousand animated particles with connecting lines using Three.js
+- **Floating Avatar** — Mouse parallax, glow rings, floating skill badges (Power BI, Excel, Python, SQL)
+- **Custom Cursor** — Dot + ring cursor with hover scale effects
+- **GSAP Scroll Animations** — Sections animate in with 3D perspective on scroll
+- **Typing Effect** — Cycles through roles in the hero section
+- **3D Tilt Cards** — Experience, skill, and project cards tilt on hover
+- **Cinematic Dark Theme** — Deep dark background with purple/cyan accent palette
+- **Grain Overlay** — Subtle film grain texture for cinematic feel
+- **Mobile Responsive** — Fully responsive with hamburger menu
+- **Contact Form** — Email and WhatsApp integration
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 + TypeScript | UI framework |
+| Vite | Build tool |
+| Three.js | 3D particle background |
+| @react-three/fiber | React renderer for Three.js |
+| @react-three/drei | Three.js helpers (Float, Bloom, etc.) |
+| @react-three/postprocessing | Bloom glow effect |
+| GSAP + ScrollTrigger | Scroll animations |
+| react-icons | Icon library |
+| framer-motion | Additional animations |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/PhanivardhanV7/Phanivardhan_Portfolio.git
+cd Phanivardhan_Portfolio
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
 ```
+
+Open `http://localhost:5173/` in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Output goes to the `dist/` folder.
+
+---
+
+## 🎨 Customization
+
+- **Avatar** — Replace `public/Avatar.png` with your own image
+- **Content** — Update each component in `src/components/` with your details
+- **Colors** — Edit CSS variables in `src/index.css` under `:root`
+- **Resume** — Replace `public/Phanivardhan_V.pdf` with your resume
+
+---
+
+## 📄 License
+
+MIT License — free to use and modify with attribution.
+
+---
+
+*Built with ❤️ by Phani Vardhan Vadla*
