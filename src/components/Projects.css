@@ -1,0 +1,24 @@
+.projects { background: #08080c; }
+.proj__label { font-family: 'Space Mono',monospace; font-size: 0.8rem; color: #8b5cf6; letter-spacing: 2px; margin-bottom: 16px; }
+.proj__heading { font-size: clamp(2rem,4vw,3rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 60px; }
+.proj__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px,1fr)); gap: 2px; }
+.proj__card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+  padding: 40px 36px; position: relative; overflow: hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+.proj__card:hover { background: rgba(255,255,255,0.04); border-color: rgba(139,92,246,0.3); }
+.proj__card-glow { position:absolute; top:-80px; right:-80px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(139,92,246,0.12),transparent 70%); pointer-events:none; }
+.proj__card-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.proj__num { font-family:'Space Mono',monospace; font-size:2.5rem; font-weight:700; color:rgba(139,92,246,0.2); line-height:1; }
+.proj__date { font-family:'Space Mono',monospace; font-size:0.72rem; color:#fff; background: linear-gradient(135deg, #8b5cf6, #06b6d4); padding:4px 14px; border-radius:2px; white-space:nowrap; font-weight: 600; }
+.proj__card h3 { font-size:1.2rem; font-weight:700; color:#f0f0f5; margin-bottom:14px; }
+.proj__card > p { font-size:0.9rem; color:#6b7280; line-height:1.8; margin-bottom:20px; }
+.proj__points { padding:0; margin-bottom:28px; display:flex; flex-direction:column; gap:8px; }
+.proj__points li { font-size:0.85rem; color:#6b7280; padding-left:18px; position:relative; line-height:1.6; }
+.proj__points li::before { content:'→'; position:absolute; left:0; color:#8b5cf6; font-size:0.8rem; }
+.proj__footer { display:flex; justify-content:space-between; align-items:center; }
+.proj__tech { display:flex; flex-wrap:wrap; gap:8px; }
+.proj__tech span { font-size:0.72rem; font-weight:600; padding:4px 12px; border-radius:2px; background:rgba(139,92,246,0.1); color:#8b5cf6; border:1px solid rgba(139,92,246,0.2); }
+.proj__link-icon { color:#6b7280; font-size:1.2rem; transition:color 0.2s; cursor:pointer; }
+.proj__card:hover .proj__link-icon { color:#8b5cf6; }

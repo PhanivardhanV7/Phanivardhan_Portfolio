@@ -1,0 +1,20 @@
+.skills { background: #060608; }
+.skills__label { font-family: 'Space Mono',monospace; font-size: 0.8rem; color: #8b5cf6; letter-spacing: 2px; margin-bottom: 16px; }
+.skills__heading { font-size: clamp(2rem,4vw,3rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 60px; }
+.skills__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2px; }
+.skill__card {
+  background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 32px; transition: background 0.3s, border-color 0.3s;
+}
+.skill__card:hover { background: rgba(255,255,255,0.04); border-color: var(--card-color, #8b5cf6); }
+.skill__card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+.skill__card-top i { font-size: 1.5rem; }
+.skill__card-top h3 { font-size: 1rem; font-weight: 700; color: #f0f0f5; }
+.skill__pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill__pills span {
+  font-size: 0.75rem; font-weight: 500; padding: 5px 14px;
+  border-radius: 2px; background: rgba(255,255,255,0.04);
+  color: #6b7280; border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.2s; cursor: default;
+}
+.skill__pills span:hover { background: rgba(255,255,255,0.08); color: #f0f0f5; }
