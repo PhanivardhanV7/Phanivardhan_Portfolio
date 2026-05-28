@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import avatarImg from '../assets/avatar.png'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Float, MeshDistortMaterial, Sphere, Torus, Icosahedron } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
@@ -145,7 +146,7 @@ export default function Hero() {
             <div className="hero__glow-ring hero__glow-ring--3" />
             {/* Avatar image */}
             <img
-              src="/Avatar.png"
+              src={avatarImg}
               alt="Phani Vardhan Vadla"
               className="hero__avatar-img"
             />
