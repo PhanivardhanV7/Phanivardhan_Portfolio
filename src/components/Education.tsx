@@ -6,7 +6,7 @@ import './Education.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const awards = [
-  { icon: 'fas fa-certificate', color: '#8b5cf6', title: 'Data Analytics Certification – Coding Ninjas', desc: 'Advanced training in Excel, Power BI, Tableau, SQL, Python & Data Visualization (2025)' },
+  { icon: 'fas fa-certificate', color: '#8b5cf6', title: 'Data Analytics Certification – Coding Ninjas', desc: 'Completed intensive certification gaining hands-on proficiency across Excel, Power BI, Tableau, SQL, Python, and Data Visualization' },
   { icon: 'fas fa-star',        color: '#f59e0b', title: 'Monthly Rockstar Performance Award',           desc: 'Recognized twice for exceptional data quality & productivity — March 2024 & March 2026' },
   { icon: 'fas fa-trophy',      color: '#10b981', title: 'PrepSAT Hackathon – PrepInsta',                desc: 'Ranked 10,012 out of 90,000+ global participants (2023)' },
 ]
