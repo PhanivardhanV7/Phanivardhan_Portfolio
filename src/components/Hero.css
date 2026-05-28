@@ -134,11 +134,18 @@
   .hero__desc { max-width: 100%; }
   .hero__btns { justify-content: center; }
   .hero__social { justify-content: center; }
-  .hero__avatar-wrap { width: 300px; height: 300px; }
-  .hero__badge--tl, .hero__badge--bl { left: 0; }
-  .hero__badge--tr, .hero__badge--br { right: 0; }
+  .hero__avatar-wrap { width: 280px; height: 280px; }
+  .hero__badge--tl { top: 10px;  left: -10px; font-size: 0.68rem; padding: 6px 10px; }
+  .hero__badge--tr { top: 10px;  right: -10px; font-size: 0.68rem; padding: 6px 10px; }
+  .hero__badge--bl { bottom: 30px; left: -10px; font-size: 0.68rem; padding: 6px 10px; }
+  .hero__badge--br { bottom: 30px; right: -10px; font-size: 0.68rem; padding: 6px 10px; }
 }
 @media (max-width: 500px) {
   .hero__avatar-wrap { width: 240px; height: 240px; }
-  .hero__badge { display: none; }
+  .hero__badge { font-size: 0.62rem; padding: 5px 8px; gap: 5px; }
+  .hero__badge img { width: 13px; height: 13px; }
+  .hero__badge--tl { top: 5px;   left: -5px; }
+  .hero__badge--tr { top: 5px;   right: -5px; }
+  .hero__badge--bl { bottom: 20px; left: -5px; }
+  .hero__badge--br { bottom: 20px; right: -5px; }
 }
