@@ -1,4 +1,4 @@
-import { useRef, FormEvent } from 'react'
+import { useRef, type FormEvent } from 'react'
 import { FiSend, FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 import './Contact.css'
