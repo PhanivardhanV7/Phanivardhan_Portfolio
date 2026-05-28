@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="hero__inner container">
         {/* Left: text content */}
         <div className="hero__content">
-          <p className="hero__tag">Hello, I am Phani Vardhan Vadla</p>
+          <p className="hero__tag">👋 Available for opportunities</p>
           <h1 className="hero__name">
             Phani Vardhan<br />
             <span className="gradient-text">Vadla</span>
