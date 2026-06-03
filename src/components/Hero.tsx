@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react'
 import avatarImg from '../assets/avatar.png'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Float, MeshDistortMaterial, Sphere, Torus, Icosahedron } from '@react-three/drei'
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import gsap from 'gsap'
 import { FiArrowRight, FiDownload } from 'react-icons/fi'
 import './Hero.css'
@@ -12,33 +11,25 @@ const roles = ['Data Analyst', 'Data Annotator', 'BI Developer', 'ETL Specialist
 function Scene3D() {
   return (
     <>
-      <ambientLight intensity={0.2} />
-      <pointLight position={[10, 10, 10]} intensity={1} color="#8b5cf6" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#06b6d4" />
-      <Float speed={1.4} rotationIntensity={1} floatIntensity={2}>
-        <Sphere args={[0.6, 64, 64]} position={[2.5, 1.5, -1]}>
-          <MeshDistortMaterial color="#8b5cf6" distort={0.4} speed={2} roughness={0} metalness={0.8} />
+      <ambientLight intensity={0.3} />
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#8b5cf6" />
+      <pointLight position={[-10, -10, -10]} intensity={0.3} color="#06b6d4" />
+      <Float speed={1} rotationIntensity={0.5} floatIntensity={1}>
+        <Sphere args={[0.6, 32, 32]} position={[2.5, 1.5, -1]}>
+          <MeshDistortMaterial color="#8b5cf6" distort={0.2} speed={1} roughness={0.1} metalness={0.6} />
         </Sphere>
       </Float>
-      <Float speed={1.8} rotationIntensity={2} floatIntensity={1.5}>
-        <Torus args={[0.5, 0.18, 16, 100]} position={[-3, 1.5, -1]}>
-          <MeshDistortMaterial color="#06b6d4" distort={0.3} speed={3} roughness={0} metalness={0.9} />
+      <Float speed={1.2} rotationIntensity={1} floatIntensity={1}>
+        <Torus args={[0.5, 0.18, 12, 60]} position={[-3, 1.5, -1]}>
+          <MeshDistortMaterial color="#06b6d4" distort={0.15} speed={1.5} roughness={0.1} metalness={0.7} />
         </Torus>
       </Float>
-      <Float speed={1.2} rotationIntensity={1.5} floatIntensity={2}>
-        <Icosahedron args={[0.5, 1]} position={[3, -2, -1]}>
-          <MeshDistortMaterial color="#10b981" distort={0.2} speed={1.5} roughness={0.1} metalness={0.7} />
+      <Float speed={0.8} rotationIntensity={1} floatIntensity={1}>
+        <Icosahedron args={[0.5, 0]} position={[3, -2, -1]}>
+          <meshStandardMaterial color="#10b981" roughness={0.2} metalness={0.5} />
         </Icosahedron>
       </Float>
-      <Float speed={2} rotationIntensity={3} floatIntensity={1}>
-        <Torus args={[0.3, 0.1, 16, 60]} position={[-2.5, -1.5, 0]}>
-          <MeshDistortMaterial color="#f59e0b" distort={0.5} speed={4} roughness={0} metalness={1} />
-        </Torus>
-      </Float>
-      <EffectComposer>
-        <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.9} intensity={1.5} />
-      </EffectComposer>
-      <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.4} />
+      <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.3} />
     </>
   )
 }
@@ -48,15 +39,15 @@ export default function Hero() {
   const avatarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Entrance animation
+    // Entrance animation — start visible, animate position only
     const tl = gsap.timeline({ delay: 0.3 })
-    tl.fromTo('.hero__tag',    { opacity:0, y:30 }, { opacity:1, y:0, duration:0.7, ease:'power3.out' })
-      .fromTo('.hero__name',   { opacity:0, y:50 }, { opacity:1, y:0, duration:0.9, ease:'power3.out' }, '-=0.4')
-      .fromTo('.hero__role',   { opacity:0, y:30 }, { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
-      .fromTo('.hero__desc',   { opacity:0, y:30 }, { opacity:1, y:0, duration:0.7, ease:'power3.out' }, '-=0.4')
-      .fromTo('.hero__btns',   { opacity:0, y:20 }, { opacity:1, y:0, duration:0.6, ease:'power3.out' }, '-=0.3')
-      .fromTo('.hero__social', { opacity:0, x:-20 },{ opacity:1, x:0, duration:0.6, ease:'power3.out' }, '-=0.3')
-      .fromTo('.hero__avatar-wrap', { opacity:0, x:60, scale:0.9 }, { opacity:1, x:0, scale:1, duration:1, ease:'power3.out' }, '-=0.8')
+    tl.fromTo('.hero__tag',    { y:30 }, { y:0, duration:0.7, ease:'power3.out' })
+      .fromTo('.hero__name',   { y:50 }, { y:0, duration:0.9, ease:'power3.out' }, '-=0.4')
+      .fromTo('.hero__role',   { y:30 }, { y:0, duration:0.7, ease:'power3.out' }, '-=0.5')
+      .fromTo('.hero__desc',   { y:30 }, { y:0, duration:0.7, ease:'power3.out' }, '-=0.4')
+      .fromTo('.hero__btns',   { y:20 }, { y:0, duration:0.6, ease:'power3.out' }, '-=0.3')
+      .fromTo('.hero__social', { x:-20 },{ x:0, duration:0.6, ease:'power3.out' }, '-=0.3')
+      .fromTo('.hero__avatar-wrap', { x:60 }, { x:0, duration:1, ease:'power3.out' }, '-=0.8')
 
     // Floating animation on avatar
     gsap.to('.hero__avatar-wrap', {

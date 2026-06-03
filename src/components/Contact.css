@@ -2,15 +2,15 @@
 .contact__label { font-family: 'Space Mono',monospace; font-size: 0.8rem; color: #8b5cf6; letter-spacing: 2px; margin-bottom: 16px; }
 .contact__heading { font-size: clamp(2rem,4vw,3rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 60px; }
 .contact__grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
-.contact__intro { color: #6b7280; line-height: 1.8; margin-bottom: 36px; font-size: 1rem; }
+.contact__intro { color: #b0b3c6; line-height: 1.8; margin-bottom: 36px; font-size: 1rem; }
 .contact__links { display: flex; flex-direction: column; gap: 16px; }
-.contact__link { display:flex; align-items:center; gap:14px; color:#6b7280; font-size:0.9rem; transition:color 0.2s,transform 0.2s; }
+.contact__link { display:flex; align-items:center; gap:14px; color:#b0b3c6; font-size:0.9rem; transition:color 0.2s,transform 0.2s; }
 .contact__link:hover { color:#8b5cf6; transform:translateX(4px); }
 .contact__link svg { color:#8b5cf6; font-size:1rem; flex-shrink:0; }
 .contact__form { display:flex; flex-direction:column; gap:12px; }
 .contact__row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 .contact__field input, .contact__field textarea { width:100%; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); color:#f0f0f5; font-size:0.92rem; padding:14px 18px; outline:none; font-family:'Inter',sans-serif; transition:border-color 0.2s,background 0.2s; resize:vertical; border-radius:2px; }
-.contact__field input::placeholder, .contact__field textarea::placeholder { color:#6b7280; }
+.contact__field input::placeholder, .contact__field textarea::placeholder { color:#b0b3c6; }
 .contact__field input:focus, .contact__field textarea:focus { border-color:#8b5cf6; background:rgba(139,92,246,0.04); }
 .contact__btns { display:flex; gap:12px; flex-wrap:wrap; margin-top:4px; }
 .btn-wa { display:inline-flex; align-items:center; gap:8px; background:rgba(37,211,102,0.1); color:#25d366; border:1px solid rgba(37,211,102,0.25); padding:14px 28px; border-radius:4px; font-weight:600; font-size:0.9rem; cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; }

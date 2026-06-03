@@ -15,8 +15,8 @@
 .exp__company { font-size: 0.88rem; color: var(--accent-color, #8b5cf6); font-weight: 500; }
 .exp__date { font-family: 'Space Mono',monospace; font-size: 0.72rem; color: #fff; background: var(--accent-color, #8b5cf6); padding: 4px 14px; border-radius: 2px; white-space: nowrap; opacity: 0.9; }
 .exp__points { padding: 0; margin-bottom: 20px; display: flex; flex-direction: column; gap: 10px; }
-.exp__points li { font-size: 0.9rem; color: #6b7280; padding-left: 18px; position: relative; line-height: 1.7; }
+.exp__points li { font-size: 0.9rem; color: #b0b3c6; padding-left: 18px; position: relative; line-height: 1.7; }
 .exp__points li::before { content: '→'; position: absolute; left: 0; color: var(--accent-color, #8b5cf6); font-size: 0.8rem; }
 .exp__tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.exp__tags span { font-size: 0.72rem; font-weight: 600; padding: 3px 12px; border-radius: 2px; background: rgba(255,255,255,0.04); color: #6b7280; border: 1px solid rgba(255,255,255,0.08); letter-spacing: 0.5px; }
+.exp__tags span { font-size: 0.72rem; font-weight: 600; padding: 3px 12px; border-radius: 2px; background: rgba(255,255,255,0.04); color: #b0b3c6; border: 1px solid rgba(255,255,255,0.08); letter-spacing: 0.5px; }
 @media (max-width: 600px) { .exp__card { padding: 24px 20px; } .exp__card-header { flex-direction: column; } }
