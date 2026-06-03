@@ -117,7 +117,7 @@ export default function Hero() {
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               View My Work <FiArrowRight />
             </button>
-            <a href="/Phanivardhan_V.pdf" className="btn-ghost" target="_blank" rel="noreferrer">
+            <a href="/Phanivardhan.pdf" className="btn-ghost" target="_blank" rel="noreferrer">
               Resume <FiDownload />
             </a>
           </div>
