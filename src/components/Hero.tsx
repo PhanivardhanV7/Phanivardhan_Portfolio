@@ -3,7 +3,7 @@ import avatarImg from '../assets/avatar.png'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Float, MeshDistortMaterial, Sphere, Torus, Icosahedron } from '@react-three/drei'
 import gsap from 'gsap'
-import { FiArrowRight, FiDownload } from 'react-icons/fi'
+import { FiArrowRight, FiDownload, FiEye, FiX } from 'react-icons/fi'
 import './Hero.css'
 
 const roles = ['Data Analyst', 'Data Annotator', 'BI Developer', 'ETL Specialist', 'QA Analyst']
@@ -36,6 +36,7 @@ function Scene3D() {
 
 export default function Hero() {
   const [roleText, setRoleText] = useState('')
+  const [showResumeModal, setShowResumeModal] = useState(false)
   const avatarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -117,9 +118,9 @@ export default function Hero() {
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               View My Work <FiArrowRight />
             </button>
-            <a href="/Phanivardhan.pdf" className="btn-ghost" target="_blank" rel="noreferrer">
+            <button className="btn-ghost" onClick={() => setShowResumeModal(true)}>
               Resume <FiDownload />
-            </a>
+            </button>
           </div>
           <div className="hero__social">
             <a href="mailto:phanivardhanvadla@gmail.com"><i className="fas fa-envelope" /></a>
@@ -167,6 +168,30 @@ export default function Hero() {
         <span>scroll</span>
         <div className="hero__scroll-line" />
       </div>
+
+      {/* Resume Modal */}
+      {showResumeModal && (
+        <div className="resume-overlay" onClick={() => setShowResumeModal(false)}>
+          <div className="resume-modal" onClick={e => e.stopPropagation()}>
+            <button className="resume-modal__close" onClick={() => setShowResumeModal(false)}>
+              <FiX />
+            </button>
+            <div className="resume-modal__icon">📄</div>
+            <h3>Resume</h3>
+            <p>What would you like to do with the resume?</p>
+            <div className="resume-modal__btns">
+              <a href="/Phanivardhan.pdf" target="_blank" rel="noreferrer" className="resume-modal__btn resume-modal__btn--view"
+                onClick={() => setShowResumeModal(false)}>
+                <FiEye /> View
+              </a>
+              <a href="/Phanivardhan.pdf" download="Phanivardhan_Resume.pdf" className="resume-modal__btn resume-modal__btn--download"
+                onClick={() => setShowResumeModal(false)}>
+                <FiDownload /> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

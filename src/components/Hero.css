@@ -149,3 +149,68 @@
   .hero__badge--bl { bottom: 20px; left: -5px; }
   .hero__badge--br { bottom: 20px; right: -5px; }
 }
+
+/* ── RESUME MODAL ── */
+.resume-overlay {
+  position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.resume-modal {
+  background: #0e0e16;
+  border: 1px solid rgba(139,92,246,0.35);
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 320px; max-width: 90vw;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.25s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(139,92,246,0.1);
+}
+@keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+.resume-modal__close {
+  position: absolute; top: 14px; right: 14px;
+  background: rgba(255,255,255,0.06); border: none;
+  color: #b0b3c6; width: 30px; height: 30px;
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; transition: background 0.2s, color 0.2s;
+}
+.resume-modal__close:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+.resume-modal__icon { font-size: 2.8rem; margin-bottom: 14px; }
+
+.resume-modal h3 {
+  font-size: 1.2rem; font-weight: 700;
+  color: #f0f0f5; margin-bottom: 8px;
+}
+.resume-modal p {
+  font-size: 0.88rem; color: #b0b3c6;
+  margin-bottom: 28px; line-height: 1.6;
+}
+
+.resume-modal__btns { display: flex; gap: 12px; justify-content: center; }
+
+.resume-modal__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 8px;
+  font-weight: 600; font-size: 0.88rem;
+  transition: all 0.2s; cursor: pointer;
+}
+.resume-modal__btn--view {
+  background: rgba(139,92,246,0.12);
+  border: 1px solid rgba(139,92,246,0.35);
+  color: #a78bfa;
+}
+.resume-modal__btn--view:hover { background: rgba(139,92,246,0.22); transform: translateY(-2px); }
+
+.resume-modal__btn--download {
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  border: none; color: #fff;
+}
+.resume-modal__btn--download:hover { opacity: 0.88; transform: translateY(-2px); }
